@@ -1,0 +1,50 @@
+/* Day One Challenge
+Two Truths and a Lie
+      Gold: 
+      Make an h1 tag saying 'Two Truths and a Lie'
+      Make 3 h3 tags, each saying a short blurb about that option (example: 'Been to Russia')
+      Make 3 p tags (one for each h3 tag), giving a short sentence elaborating that truth/lie
+      Wrap it all in a div tag
+      Blue: 
+      Using CSS: 
+      Make the h1 tag LIGHT GREEN and CENTERED
+      Make each h3 tag BLUE
+      Make each p tag RED
+      Wrap it all in a BORDER that is THICK and BLACK
+      Red:
+      Curve the corners of that BORDER
+      Give it a BACKGROUND COLOR of GREY
+      Wrap each Truth/Lie in separate divs, give them each a BORDER, curve the BORDER, and make each BACKGROUND COLOR LIGHT GREY
+      CENTER everything in each div
+      Line each Truth/Lie side-by-side */
+
+h1 {
+    color: lightgreen;
+    text-align: center;
+}
+
+h3 {
+    color: blue;
+    font-weight: 1;
+}
+
+p {
+    color: red;
+}
+
+#truthLie {
+    border: 3px solid black;
+    border-radius: 1em;
+    background-color: grey;
+    padding: .25em;
+    text-align: center;
+}
+
+.option {
+    border: 1px solid black;
+    border-radius: 1em;
+    background-color: lightgray;
+    text-align: center;
+    width: 33%;
+    display: inline-block;
+}
