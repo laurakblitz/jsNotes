@@ -2,24 +2,14 @@ class Animal {
     constructor(name){
         this.name = name;
     }
-
     eat(){
         console.log(`${this.name} eats their food`)
     }
 }
 
 let myAnimal = new Animal("Tiger");
-
-
-//class HousePet {
-//    constructor(isTrained){
-//        this.isTrained = isTrained
-//    }
-//}
-
 console.log(myAnimal.name);
 myAnimal.eat()
-
 class Dog extends Animal {
     constructor(name, breed){
         super(name);
@@ -31,14 +21,13 @@ class Dog extends Animal {
 }
 
 let finn = new Dog('Finn', 'Shiba Inu');
-finn.eat()
-finn.play()
-
-console.log(finn)
-
+finn.eat();
+finn.play();
+console.log(finn);
 class HouseDog extends Dog{
     constructor(name, breed, isTrained){
-        this.isTrained = isTrained
+        super(name, breed);
+        this.isTrained = isTrained;
     }
 }
 
@@ -46,8 +35,7 @@ myIndoorDog = new HouseDog("spongie", "lab", true)
 myIndoorDog.eat()
 
 
-// APIE Abstraction, Polymorphism, Inheritance and Encapsulation
-
+// APIE Abstraction, Polymorphism, Inheritance and Encapsulation.
 // Abstraction
 console.log() // I don't need to know how this works
 
@@ -58,39 +46,37 @@ class Point{
         this.y = y;
     }
     print(){
-        console.log(`x:${x}, y:${y}`)
+        console.log(`x:${this.x}, y:${this.y}`)
     }
 }
-
 class Point2 extends Point{
     constructor(x, y, z){
         super(x, y);
         this.z = z;
     }
     print(){
-        console.log(`x:${this.x}, y:${this.y}, z${this.z}`)
+        console.log(`x:${this.x}, y:${this.y}, z:${this.z}`)
     }
 }
-
 let myPoint = new Point(5, 6)
 myPoint.print()
-
-let myPoint = new Point2(5, 6, 7)
+let myPointTwo = new Point2(5, 6, 7)
 myPointTwo.print()
 
 // Inheritance
-// Through inheritance we don't need to make the
-// Properties this.name // this.breed
+// Through Inheritance we don't need to make the
+// Properties this.name // this.breed 
 // Or the Methods eat() // play()
-//class HouseDog extends Dog{
-//    constructor(name, breed, isTrained){
-//        this.isTrained = isTrained
-//    }
-//}
+// class HouseDog extends Dog{
+//     constructor(name, breed, isTrained){
+//         super(name, breed);
+//         this.isTrained = isTrained;
+//     }
+// }
 
 // Encapsulation
 x = {
-    data: 5
+    data: 5,
     displayData() {
         console.log(this.data)
     }
@@ -102,9 +88,8 @@ y = {
     }
 }
 x.displayData()
-
+console.log(x.data)
 let testObj = {
     myLog: (x) => console.log(x),
 }
-
 testObj.myLog("This is a test of myLog")
